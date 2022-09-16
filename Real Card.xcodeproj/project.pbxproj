@@ -11,6 +11,12 @@
 		558F8E5D28D1F6BC00C17077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F8E5C28D1F6BC00C17077 /* ContentView.swift */; };
 		558F8E5F28D1F6BD00C17077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558F8E5E28D1F6BD00C17077 /* Assets.xcassets */; };
 		558F8E6228D1F6BD00C17077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558F8E6128D1F6BD00C17077 /* Preview Assets.xcassets */; };
+		558F8E6A28D2089800C17077 /* RC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F8E6928D2089800C17077 /* RC4.swift */; };
+		558F8E6D28D21B3900C17077 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F8E6C28D21B3900C17077 /* MainModel.swift */; };
+		558F8E7028D2206300C17077 /* SwiftWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 558F8E6F28D2206300C17077 /* SwiftWebSocket */; };
+		558F8E7328D227CB00C17077 /* CardInsertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F8E7228D227CB00C17077 /* CardInsertView.swift */; };
+		558F8E7528D2383C00C17077 /* NFCReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558F8E7428D2383C00C17077 /* NFCReader.swift */; };
+		55BE488628D3641800A04F96 /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BE488528D3641800A04F96 /* Notification.Name+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,13 @@
 		558F8E5C28D1F6BC00C17077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		558F8E5E28D1F6BD00C17077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		558F8E6128D1F6BD00C17077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		558F8E6928D2089800C17077 /* RC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RC4.swift; sourceTree = "<group>"; };
+		558F8E6C28D21B3900C17077 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		558F8E7228D227CB00C17077 /* CardInsertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInsertView.swift; sourceTree = "<group>"; };
+		558F8E7428D2383C00C17077 /* NFCReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReader.swift; sourceTree = "<group>"; };
+		55BE488528D3641800A04F96 /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
+		55BE488728D37D9100A04F96 /* Real Card.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Real Card.entitlements"; sourceTree = "<group>"; };
+		55BE488828D37E1700A04F96 /* Real-Card-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Real-Card-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558F8E7028D2206300C17077 /* SwiftWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +65,12 @@
 		558F8E5928D1F6BC00C17077 /* Real Card */ = {
 			isa = PBXGroup;
 			children = (
+				55BE488828D37E1700A04F96 /* Real-Card-Info.plist */,
+				55BE488728D37D9100A04F96 /* Real Card.entitlements */,
+				55BE488428D363E000A04F96 /* Extensions */,
+				558F8E7128D224C200C17077 /* Views */,
+				558F8E6B28D21A6F00C17077 /* Classes */,
+				558F8E6828D2088900C17077 /* Utils */,
 				558F8E5A28D1F6BC00C17077 /* Real_CardApp.swift */,
 				558F8E5C28D1F6BC00C17077 /* ContentView.swift */,
 				558F8E5E28D1F6BD00C17077 /* Assets.xcassets */,
@@ -65,6 +85,39 @@
 				558F8E6128D1F6BD00C17077 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		558F8E6828D2088900C17077 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				558F8E6928D2089800C17077 /* RC4.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		558F8E6B28D21A6F00C17077 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				558F8E7428D2383C00C17077 /* NFCReader.swift */,
+				558F8E6C28D21B3900C17077 /* MainModel.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		558F8E7128D224C200C17077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				558F8E7228D227CB00C17077 /* CardInsertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55BE488428D363E000A04F96 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55BE488528D3641800A04F96 /* Notification.Name+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +136,9 @@
 			dependencies = (
 			);
 			name = "Real Card";
+			packageProductDependencies = (
+				558F8E6F28D2206300C17077 /* SwiftWebSocket */,
+			);
 			productName = "Real Card";
 			productReference = 558F8E5728D1F6BC00C17077 /* Real Card.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +167,9 @@
 				Base,
 			);
 			mainGroup = 558F8E4E28D1F6BC00C17077;
+			packageReferences = (
+				558F8E6E28D2206300C17077 /* XCRemoteSwiftPackageReference "SwiftWebSocket" */,
+			);
 			productRefGroup = 558F8E5828D1F6BC00C17077 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				558F8E6D28D21B3900C17077 /* MainModel.swift in Sources */,
+				55BE488628D3641800A04F96 /* Notification.Name+Extension.swift in Sources */,
+				558F8E6A28D2089800C17077 /* RC4.swift in Sources */,
+				558F8E7528D2383C00C17077 /* NFCReader.swift in Sources */,
+				558F8E7328D227CB00C17077 /* CardInsertView.swift in Sources */,
 				558F8E5D28D1F6BC00C17077 /* ContentView.swift in Sources */,
 				558F8E5B28D1F6BC00C17077 /* Real_CardApp.swift in Sources */,
 			);
@@ -195,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -264,12 +328,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Real Card/Real Card.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Real Card/Preview Content\"";
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Real-Card-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Real Card requires you to enable NFC Scan to read the Amuement IC and/or e-amusement card.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +360,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Real Card/Real Card.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Real Card/Preview Content\"";
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Real-Card-Info.plist";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Real Card requires you to enable NFC Scan to read the Amuement IC and/or e-amusement card.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		558F8E6E28D2206300C17077 /* XCRemoteSwiftPackageReference "SwiftWebSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftSimpers/SwiftWebSocket";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		558F8E6F28D2206300C17077 /* SwiftWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 558F8E6E28D2206300C17077 /* XCRemoteSwiftPackageReference "SwiftWebSocket" */;
+			productName = SwiftWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 558F8E4F28D1F6BC00C17077 /* Project object */;
 }

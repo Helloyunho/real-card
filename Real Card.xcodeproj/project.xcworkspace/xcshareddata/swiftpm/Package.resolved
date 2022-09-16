@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftwebsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftSimpers/SwiftWebSocket",
+      "state" : {
+        "branch" : "main",
+        "revision" : "615071d3255166b2938179f443079200093d5496"
+      }
+    }
+  ],
+  "version" : 2
+}
