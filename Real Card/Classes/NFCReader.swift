@@ -20,9 +20,11 @@ class NFCReader: NSObject, NFCTagReaderSessionDelegate, ObservableObject {
     public func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) {
         if let readerError = error as? NFCReaderError {
             if readerError.code == .readerSessionInvalidationErrorSessionTimeout, self.repeat {
-                let retryInterval = DispatchTimeInterval.milliseconds(500)
-                DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) {
-                    session.restartPolling()
+                let retryInterval = DispatchTimeInterval.seconds(1)
+                DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) { [weak self] in
+                    if let self = self {
+                        self.initialize()
+                    }
                 }
                 return
             }
@@ -65,9 +67,11 @@ class NFCReader: NSObject, NFCTagReaderSessionDelegate, ObservableObject {
                 NotificationCenter.default.post(name: .nfcCardRead, object: feliCaTag)
             }
             if self.repeat {
-                let retryInterval = DispatchTimeInterval.milliseconds(500)
-                DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) {
-                    session.restartPolling()
+                let retryInterval = DispatchTimeInterval.milliseconds(3500)
+                DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval) { [weak self] in
+                    if let self = self {
+                        self.initialize()
+                    }
                 }
             }
         }
