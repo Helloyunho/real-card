@@ -1,2 +1,5 @@
 **/.DS_Store
 /dist
+/spicetools
+/test.ts
+/test2.ts
